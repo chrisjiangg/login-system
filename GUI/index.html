@@ -1,0 +1,71 @@
+<!--File type-->
+<!DOCTYPE html>
+<!--Sets Language-->
+<html lang="en">
+<head>
+    <!--Specifies the character encoding-->
+    <!--UTF-8 covers most of the characters and symbols-->
+    <meta charset="UTF-8">
+    <!--http-equiv provides an HTTP header for the value of the content attribute and content specifies the value associated with the http-equiv or name attribute-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Specifies a name for the metadata-->
+    <!--Sets the viewport and makes it look good on all devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Name of the tab-->
+    <title>Pacemaker Login</title>
+    <!--Add font-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+    <!--Links the css file to html file-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--Classes for Creating account-->
+<div class="container" id="container">
+    <div class="form-container sign-up-container">
+        <form action="">
+            <h1>Create Account</h1>
+            <!--User inputs-->
+            <input type="email" placeholder="Email" id="createaccountemail" onkeyup='validatecreateEmail()'>
+            <span id="email-error"></span>
+            <input type="password" placeholder="Password" id="createaccountpassword" onkeyup='validatecreatePassword()'>
+            <span id="password-error"></span>
+            <button type="submit" id="createaccountbutton" onmousedown='Userinfo()'>Create Account</button>
+            <span id="create-error"></span>
+        </form>
+    </div>
+    <!--Class for sign in-->
+    <div class="form-container sign-in-container">
+        <form action="">
+            <h1>Sign In</h1>
+            <!--User Inputs-->
+            <input type="email" placeholder="Email" id="signinemail">
+            <span id="signinemail-error"></span>
+            <input type="password" placeholder="Password" id="signinpassword">
+            <span id="signinpassword-error"></span>
+            <button type="button" id="signinbutton">Sign In</button>
+            <span id="signin-error"></span>
+        </form>
+    </div>
+    <!--Overlay Class-->
+    <div class="overlay-container">
+        <div class="overlay">
+            <!--Left Overlay Class-->
+            <div class="overlay-panel overlay-left">
+                <h1>Hello!</h1>
+                <p>Enter your personal details to create a <strong>PACEMAKER</strong> account!</p>
+                <span>Already have an account?</span>
+                <button class="ghost" id="signIn">Sign In</button>
+            </div>
+            <!--Right Overlay Class-->
+            <div class="overlay-panel overlay-right">
+                <h1>Welcome Back!</h1>
+                <p>Please login to your <strong>PACEMAKER</strong> account with your personal info!</p>
+                <span>Don't have an account?</span>
+                <button class="ghost" id="createAccount">Create Account</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="index.js"></script>
+</body>
+</html> 
